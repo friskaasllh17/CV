@@ -1,0 +1,147 @@
+
+/* ---------- 1. RESET & HALAMAN ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #ddd;              /* latar di luar kertas */
+}
+
+body {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 12mm 16mm;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;				 /*jarak antar baris*/
+  color: #111;                   /* warna teks */
+  background: #fff;              /* warna kertas */
+}
+
+
+/* ---------- 2. HEADER ---------- */
+header {
+  display: flex; 						/*berdampingan disamping*/
+  justify-content: space-between;	 	/*teks dikiri foto dikanan*/
+  align-items: flex-start; 				/*rata keatas*/
+}
+
+header p {
+  margin: 3px 0;
+}
+
+header img {
+  width: 38mm;
+  height: 45mm;
+  object-fit: cover;
+}
+
+h1 {
+  margin: 0;
+  font-size: 34px;
+}
+
+.posisi {
+  margin: 0 0 10px;
+  font-weight: 600;
+  color: #555;                   /* abu-abu */
+}
+
+
+/* ---------- 3. JUDUL BAGIAN ---------- */
+h2 {
+  margin: 24px 0 12px;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+  font-size: 14px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin: 16px 0 6px;
+  font-size: 14px;
+  color: #555;                   /* abu-abu */
+}
+
+h3:first-of-type {
+  margin-top: 0;
+}
+
+
+/* ---------- 4. ISI ---------- */
+.profil {
+  margin: 0;
+  text-align: justify;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.keahlian {
+  columns: 2;
+}
+
+
+/* ---------- 5. TABEL PENDIDIKAN ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 7px 10px;
+  white-space:nowrap;
+  text-align: left;
+  border: 1px solid #111;        /* warna garis tabel */
+}
+
+th {
+  background: #f0f0f0;           /* latar header tabel */
+  
+}
+
+@media (max-width: 768px) {
+
+  body {
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+    padding: 20px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header img {
+    width: 120px;
+    height: auto;
+    margin-top: 15px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .keahlian {
+    columns: 1;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  th,
+  td {
+    white-space: normal;
+  }
+}
